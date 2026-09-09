@@ -1,0 +1,2387 @@
+{
+  "FormattingPaneSettings": {
+    "Writeback": {
+      "Settings": {
+        "SendOnlyKeys": {
+          "FormattingType": "ToggleSwitch",
+          "name": "sendOnlyKeys",
+          "displayName": "Send only keys",
+          "description": "Uses only transaction keys and (delta) values for writing back data. If disabled, also includes metadata such as columns and rows. It is recommended to enable this and use transaction keys (guide available on knowledge base)",
+          "value": false,
+          "InternalPropertyName": "planningConnection.sendOnlyKeys"
+        },
+        "BatchChangesByRow": {
+          "FormattingType": "ToggleSwitch",
+          "name": "batchRows",
+          "displayName": "Batch changes by row",
+          "description": "Batches changes per row rather than per cell. Meaning all cell changes on the same row are inserted together in the database rather than one by one.",
+          "value": false,
+          "InternalPropertyName": "planningConnection.batchRows"
+        },
+        "DoNotSaveZeroValues": {
+          "FormattingType": "ToggleSwitch",
+          "name": "excludeZeros",
+          "displayName": "Do not save ",
+          "description": "Does not allow saving zero values to the database",
+          "value": true,
+          "InternalPropertyName": "planningConnection.excludeZeros"
+        },
+        "AllowWritingInBlanks": {
+          "FormattingType": "ToggleSwitch",
+          "name": "writeBlanks",
+          "displayName": "Allow writing in blanks",
+          "description": "Allow writing in cells that have blank/null values",
+          "value": true,
+          "InternalPropertyName": "planningConnection.writeBlanks"
+        },
+        "EnableDrillThrough": {
+          "FormattingType": "ToggleSwitch",
+          "name": "drillThrough",
+          "displayName": "Enable drill through",
+          "description": "Drill through enables a transaction view when double clicking on a cell",
+          "value": false,
+          "InternalPropertyName": "planningConnection.drillThrough"
+        },
+        "BatchChanges": {
+          "FormattingType": "ToggleSwitch",
+          "name": "batchChanges",
+          "displayName": "Batch changes",
+          "description": "If false, saves new cell values upon changing them",
+          "value": true,
+          "InternalPropertyName": "planningConnection.batchChanges"
+        },
+        "AutoSaveBatchChanges": {
+          "FormattingType": "ToggleSwitch",
+          "name": "autoSaveBatchChanges",
+          "displayName": "Auto save batch changes",
+          "description": "Enable auto-save if batch changes are on",
+          "value": false,
+          "InternalPropertyName": "planningConnection.autoSaveBatchChanges"
+        },
+        "AutoSaveBatchChangesInterval": {
+          "FormattingType": "NumUpDown",
+          "name": "autoSaveBatchChangesInterval",
+          "displayName": "Auto save batch changes interval",
+          "description": "Time interval before a batch of value changes is automatically saved (in seconds)",
+          "value": 1,
+          "InternalPropertyName": "planningConnection.autoSaveBatchChangesInterval"
+        },
+        "DelayedProcessingData": {
+          "FormattingType": "ToggleSwitch",
+          "name": "delayedProcessingData",
+          "displayName": "Delayed processing data",
+          "description": "When enabled, you can type quickly without interruptions. Changes are queued and processed after a short delay, ensuring a smooth editing experience. This setting can NOT be enabled if Auto save batch changes is on ",
+          "value": false,
+          "InternalPropertyName": "planningConnection.delayedProcessingData"
+        },
+        "DelayedProcessingDataInterval": {
+          "FormattingType": "NumUpDown",
+          "name": "delayedProcessingDataInterval",
+          "displayName": "Delayed processing data interval",
+          "description": "Time interval before a batch of value changes is automatically updated (in seconds)",
+          "value": 1,
+          "InternalPropertyName": "planningConnection.delayedProcessingDataInterval"
+        },
+        "ShowLoadingScreen": {
+          "FormattingType": "ToggleSwitch",
+          "name": "spinner",
+          "displayName": "Show loading screen",
+          "description": null,
+          "value": true,
+          "InternalPropertyName": "planningConnection.spinner"
+        },
+        "LockCellsWhileSaving": {
+          "FormattingType": "ToggleSwitch",
+          "name": "editLock",
+          "displayName": "Lock cells while saving",
+          "description": "Disables modifying cell values while a writeback transaction is in progress",
+          "value": true,
+          "InternalPropertyName": "planningConnection.editLock"
+        },
+        "PendingChangeIndicator": {
+          "FormattingType": "ToggleSwitch",
+          "name": "dataPendingOnSave",
+          "displayName": "Pending Change Indicator",
+          "description": "Indicates on save button if there is unsaved data in the visual. This is only a visual indicator and does not affect the writeback process",
+          "value": false,
+          "InternalPropertyName": "planningConnection.dataPendingOnSave"
+        }
+      },
+      "Connection": {
+        "LicenseKey": {
+          "FormattingType": "TextInput",
+          "name": "key",
+          "displayName": "License key",
+          "description": "The accoPLANNNING license key (only for non-Appsource instances)",
+          "value": null,
+          "InternalPropertyName": "planningConnection.key"
+        },
+        "SelfHostedAPI": {
+          "FormattingType": "ToggleSwitch",
+          "name": "useOnPremAPI",
+          "displayName": "Self-hosted API",
+          "description": "Enable self-hosted API for writeback through your own API (see knowledge base)",
+          "value": false,
+          "InternalPropertyName": "planningConnection.useOnPremAPI"
+        },
+        "SelfHostedAPIURL": {
+          "FormattingType": "TextInput",
+          "name": "onPremAPIURL",
+          "displayName": "Self-hosted API URL",
+          "description": "The URL of your self-hosted API (see knowledge base)",
+          "value": null,
+          "InternalPropertyName": "planningConnection.onPremAPIURL"
+        },
+        "AuthenticationMethod": {
+          "FormattingType": "ItemDropdown",
+          "name": "authenticationMethod",
+          "displayName": "Authentication Method",
+          "description": "Choose database authentication method to use",
+          "value": "SQL",
+          "InternalPropertyName": "planningConnection.authenticationMethod"
+        },
+        "UseFabricConnection": {
+          "FormattingType": "ToggleSwitch",
+          "name": "isFabric",
+          "displayName": "Use Fabric Connection",
+          "description": "Toggle this on if you want to writeback to a Fabric Data Warehouse",
+          "value": false,
+          "InternalPropertyName": "planningConnection.isFabric"
+        },
+        "WritebackTargetType": {
+          "FormattingType": "ItemDropdown",
+          "name": "writebackTarget",
+          "displayName": "Writeback target type",
+          "description": "Choose database type to use",
+          "value": "SQL",
+          "InternalPropertyName": "planningConnection.writebackTarget"
+        },
+        "ServerName": {
+          "FormattingType": "TextInput",
+          "name": "host",
+          "displayName": "Server name",
+          "description": "The server hosting the writeback table",
+          "value": null,
+          "InternalPropertyName": "planningConnection.host"
+        },
+        "DatabaseUser": {
+          "FormattingType": "TextInput",
+          "name": "user",
+          "displayName": "Database user",
+          "description": "The database user credentials for table access",
+          "value": null,
+          "InternalPropertyName": "planningConnection.user"
+        },
+        "DatabasePassword": {
+          "FormattingType": "TextInput",
+          "name": "password",
+          "displayName": "Database password",
+          "description": "The database password/secret credentials for table access",
+          "value": null,
+          "InternalPropertyName": "planningConnection.password"
+        },
+        "TenantId": {
+          "FormattingType": "TextInput",
+          "name": "tenantId",
+          "displayName": "Tenant Id",
+          "description": "The Tenant Id for Service Principal authentication",
+          "value": null,
+          "InternalPropertyName": "planningConnection.tenantId"
+        },
+        "DatabaseName": {
+          "FormattingType": "TextInput",
+          "name": "DB",
+          "displayName": "Database name",
+          "description": "The name of the database for writeback",
+          "value": null,
+          "InternalPropertyName": "planningConnection.DB"
+        },
+        "SchemaName": {
+          "FormattingType": "TextInput",
+          "name": "schemaName",
+          "displayName": "Schema Name",
+          "description": "The database schema",
+          "value": null,
+          "InternalPropertyName": "planningConnection.schemaName"
+        },
+        "WritebackTable": {
+          "FormattingType": "TextInput",
+          "name": "writeBack",
+          "displayName": "Writeback table",
+          "description": "The table to write back to",
+          "value": null,
+          "InternalPropertyName": "planningConnection.writeBack"
+        },
+        "UsernameColumn": {
+          "FormattingType": "TextInput",
+          "name": "usernameColumn",
+          "displayName": "Username column",
+          "description": "The name of the column in the table that logs current user upon writeback",
+          "value": "updateDetails",
+          "InternalPropertyName": "planningConnection.usernameColumn"
+        },
+        "TimestampColumn": {
+          "FormattingType": "TextInput",
+          "name": "timestampColumn",
+          "displayName": "Timestamp column",
+          "description": "The name of the column in the table that logs the current timestamp upon writeback",
+          "value": "updateDate",
+          "InternalPropertyName": "planningConnection.timestampColumn"
+        },
+        "CurrentUser": {
+          "FormattingType": "TextInput",
+          "name": "currentUser",
+          "displayName": "Current user",
+          "description": "The current user of the visual",
+          "value": null,
+          "InternalPropertyName": "planningConnection.currentUser"
+        },
+        "RequestTimeoutSeconds": {
+          "FormattingType": "NumUpDown",
+          "name": "requestTimeout",
+          "displayName": "Request timeout (seconds)",
+          "description": "Time limit on how long a writeback transaction may take",
+          "value": 15,
+          "InternalPropertyName": "planningConnection.requestTimeout"
+        }
+      },
+      "Assistance": {
+        "ReferenceUser": {
+          "FormattingType": "TextInput",
+          "name": "referenceWritebackUser",
+          "displayName": "Reference User",
+          "description": "A reference of the user last encrypted",
+          "value": null,
+          "InternalPropertyName": "planningConnection.referenceWritebackUser"
+        },
+        "GenerateWritebackTableTemplate": {
+          "FormattingType": "ToggleSwitch",
+          "name": "writebackTableAssist",
+          "displayName": "Generate writeback table template",
+          "description": "Displays an SQL script based on data fields, measures, and connection fields for generating a WB schema and table",
+          "value": false,
+          "InternalPropertyName": "planningConnection.writebackTableAssist"
+        }
+      }
+    },
+    "Layout": {
+      "General": {
+        "TableStyle": {
+          "FormattingType": "ItemDropdown",
+          "name": "layout",
+          "displayName": "Table style",
+          "description": "The general style of the table",
+          "value": "compact",
+          "InternalPropertyName": "layout.layout"
+        },
+        "DecimalAndThousandSeparators": {
+          "FormattingType": "ItemDropdown",
+          "name": "separators",
+          "displayName": "Decimal & thousand separators",
+          "description": "Decimal & thousand separators. Power BI default uses the language settings in Power BI to determine separators",
+          "value": "locale",
+          "InternalPropertyName": "layout.separators"
+        },
+        "AllowSortingOn": {
+          "FormattingType": "ItemDropdown",
+          "name": "sorting",
+          "displayName": "Allow sorting on",
+          "description": "Allows users to sort values on given dimensions. Sorting changes do not persist",
+          "value": "on",
+          "InternalPropertyName": "layout.sorting"
+        },
+        "AutoExpand": {
+          "FormattingType": "ItemDropdown",
+          "name": "autoExpand",
+          "displayName": "Auto expand",
+          "description": "Automatically expands and shows all children of the given type on start-up",
+          "value": "both",
+          "InternalPropertyName": "layout.autoExpand"
+        },
+        "AggregationLabels": {
+          "FormattingType": "ToggleSwitch",
+          "name": "aggregationLabels",
+          "displayName": "Aggregation labels",
+          "description": "Prepends aggregation labels on headers, e.g. 'sum of [My Measure]'",
+          "value": false,
+          "InternalPropertyName": "layout.aggregationLabels"
+        },
+        "AllowFiltering": {
+          "FormattingType": "ToggleSwitch",
+          "name": "allowFiltering",
+          "displayName": "Allow filtering",
+          "description": "Allowing user to filter based on clicked hierarchy",
+          "value": false,
+          "InternalPropertyName": "layout.allowFiltering"
+        },
+        "MultiLineHeaders": {
+          "FormattingType": "ToggleSwitch",
+          "name": "multiLineHeaders",
+          "displayName": "Multi line headers",
+          "description": "Enable multi-line headers",
+          "value": false,
+          "InternalPropertyName": "layout.multiLineHeaders"
+        }
+      },
+      "ToolbarSettings": {
+        "ShowToolbar": {
+          "FormattingType": "ToggleSwitch",
+          "name": "showToolbar",
+          "displayName": "Show toolbar",
+          "description": null,
+          "value": true,
+          "InternalPropertyName": "layout.showToolbar"
+        },
+        "ToolbarDarkMode": {
+          "FormattingType": "ToggleSwitch",
+          "name": "toolbarDarkMode",
+          "displayName": "Toolbar dark mode",
+          "description": null,
+          "value": "pbiviz.visual.guid === 'accoPLANNING_4DAA52ABFBF441E2A7898A79384CAFA0' ? true : false",
+          "InternalPropertyName": "layout.toolbarDarkMode"
+        },
+        "ShowToolbarLabels": {
+          "FormattingType": "ToggleSwitch",
+          "name": "showToolbarLabels",
+          "displayName": "Show toolbar labels",
+          "description": null,
+          "value": false,
+          "InternalPropertyName": "layout.showToolbarLabels"
+        },
+        "ShowInformationButton": {
+          "FormattingType": "ToggleSwitch",
+          "name": "infoButton",
+          "displayName": "Show information button",
+          "description": "Shows the information button",
+          "value": true,
+          "InternalPropertyName": "layout.infoButton"
+        },
+        "ShowNotificationButton": {
+          "FormattingType": "ToggleSwitch",
+          "name": "notificationButton",
+          "displayName": "Show notification button",
+          "description": "Shows the notification button",
+          "value": true,
+          "InternalPropertyName": "layout.notificationButton"
+        },
+        "ShowResetSortButton": {
+          "FormattingType": "ToggleSwitch",
+          "name": "resetSortButton",
+          "displayName": "Show reset sort button",
+          "description": "Shows the reset sort button",
+          "value": true,
+          "InternalPropertyName": "layout.resetSortButton"
+        },
+        "ShowUndoButton": {
+          "FormattingType": "ToggleSwitch",
+          "name": "undoButton",
+          "displayName": "Show undo button",
+          "description": "Shows the undo button",
+          "value": true,
+          "InternalPropertyName": "layout.undoButton"
+        },
+        "ShowRedoButton": {
+          "FormattingType": "ToggleSwitch",
+          "name": "redoButton",
+          "displayName": "Show redo button",
+          "description": "Shows the redo button",
+          "value": true,
+          "InternalPropertyName": "layout.redoButton"
+        },
+        "ShowSaveLayoutButton": {
+          "FormattingType": "ToggleSwitch",
+          "name": "saveLayoutButton",
+          "displayName": "Show save layout button",
+          "description": "Shows the save layout button",
+          "value": true,
+          "InternalPropertyName": "layout.saveLayoutButton"
+        },
+        "ShowExportButton": {
+          "FormattingType": "ToggleSwitch",
+          "name": "exportButton",
+          "displayName": "Show export button",
+          "description": "Shows the export button",
+          "value": true,
+          "InternalPropertyName": "layout.exportButton"
+        },
+        "ShowAdvancedEditButton": {
+          "FormattingType": "ToggleSwitch",
+          "name": "advancedEditButton",
+          "displayName": "Show advanced edit button",
+          "description": "Shows the advanced edit button",
+          "value": true,
+          "InternalPropertyName": "layout.advancedEditButton"
+        },
+        "ShowCommentButton": {
+          "FormattingType": "ToggleSwitch",
+          "name": "commentButton",
+          "displayName": "Show comment button",
+          "description": "Shows the comment button",
+          "value": true,
+          "InternalPropertyName": "layout.commentButton"
+        },
+        "ShowPendingSaveButton": {
+          "FormattingType": "ToggleSwitch",
+          "name": "pendingSaveButton",
+          "displayName": "Show pending save button",
+          "description": "Shows the pending save button",
+          "value": true,
+          "InternalPropertyName": "layout.pendingSaveButton"
+        },
+        "ShowMinimizeToolbarButton": {
+          "FormattingType": "ToggleSwitch",
+          "name": "minimizeToolbarButton",
+          "displayName": "Show minimize toolbar button",
+          "description": "Shows the minimize toolbar button",
+          "value": true,
+          "InternalPropertyName": "layout.minimizeToolbarButton"
+        },
+        "ToolbarButtonColor": {
+          "FormattingType": "ColorPicker",
+          "name": "toolbarButtonColor",
+          "displayName": "Toolbar button color",
+          "description": "Color used for toolbar buttons",
+          "value": "#9BABB8",
+          "InternalPropertyName": "layout.toolbarButtonColor"
+        },
+        "ToolbarBackgroundColor": {
+          "FormattingType": "ColorPicker",
+          "name": "toolbarBackgroundColor",
+          "displayName": "Toolbar background color",
+          "description": "Color used for toolbar background",
+          "value": "#ebeced",
+          "InternalPropertyName": "layout.toolbarBackgroundColor"
+        },
+        "ToolbarHoverColor": {
+          "FormattingType": "ColorPicker",
+          "name": "toolbarHoverColor",
+          "displayName": "Toolbar hover color",
+          "description": "Color used for toolbar hover",
+          "value": "white",
+          "InternalPropertyName": "layout.toolbarHoverColor"
+        },
+        "ToolbarHeightSize": {
+          "FormattingType": "NumUpDown",
+          "name": "toolbarHeightSize",
+          "displayName": "Toolbar height size",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "layout.toolbarHeightSize"
+        }
+      },
+      "HeightAndWidth": {
+        "AutoSizeWidth": {
+          "FormattingType": "ToggleSwitch",
+          "name": "forceCellWidth",
+          "displayName": "Auto size width",
+          "description": null,
+          "value": true,
+          "InternalPropertyName": "layout.forceCellWidth"
+        },
+        "CellWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "cellWidth",
+          "displayName": "Cell width",
+          "description": null,
+          "value": 50,
+          "InternalPropertyName": "layout.cellWidth"
+        },
+        "CellHeight": {
+          "FormattingType": "NumUpDown",
+          "name": "cellHeight",
+          "displayName": "Cell height",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "layout.cellHeight"
+        }
+      },
+      "Hierarchy": {
+        "EnableHierarchy": {
+          "FormattingType": "ToggleSwitch",
+          "name": "useHierarchy",
+          "displayName": "Enable hierarchy",
+          "description": "Enables hierarchy on rows, for cases of unbalanced or ragged hierarchies",
+          "value": true,
+          "InternalPropertyName": "layout.useHierarchy"
+        },
+        "HideColumnHierarchyNames": {
+          "FormattingType": "ToggleSwitch",
+          "name": "hideColumnHierachyNames",
+          "displayName": "Hide column hierachy names",
+          "description": "Visibly hides the column hierachy names",
+          "value": false,
+          "InternalPropertyName": "layout.hideColumnHierachyNames"
+        },
+        "HideDimensionsWithBlankTitles": {
+          "FormattingType": "ToggleSwitch",
+          "name": "excludeBlanks",
+          "displayName": "Hide dimensions w/ blank titles",
+          "description": "Visually hides all dimensions that do not have a title, and would otherwise have the title '(blank)', regardless of whether the dimension contains values",
+          "value": false,
+          "InternalPropertyName": "layout.excludeBlanks"
+        },
+        "HierarchyName": {
+          "FormattingType": "TextInput",
+          "name": "hierarchyName",
+          "displayName": "Hierarchy name",
+          "description": "The parent name of your hierarchy (change is only visual, does not affect writeback)",
+          "value": null,
+          "InternalPropertyName": "layout.hierarchyName"
+        },
+        "ShowHierarchy": {
+          "FormattingType": "ToggleSwitch",
+          "name": "showHierarchies",
+          "displayName": "Show hierarchy",
+          "description": "Shows the hierarchy level on the row headers",
+          "value": true,
+          "InternalPropertyName": "layout.showHierarchies"
+        }
+      }
+    },
+    "Grid": {
+      "Styling": {
+        "Theme": {
+          "FormattingType": "ItemDropdown",
+          "name": "theme",
+          "displayName": "Theme",
+          "description": null,
+          "value": "none",
+          "InternalPropertyName": "grid.theme"
+        },
+        "ShowGridLines": {
+          "FormattingType": "ItemDropdown",
+          "name": "style",
+          "displayName": "Show grid lines",
+          "description": null,
+          "value": "default",
+          "InternalPropertyName": "grid.style"
+        },
+        "FontFamily": {
+          "FormattingType": "FontPicker",
+          "name": "fontFamily",
+          "displayName": "Font family",
+          "description": null,
+          "value": "Arial",
+          "InternalPropertyName": "grid.fontFamily"
+        },
+        "FontSize": {
+          "FormattingType": "NumUpDown",
+          "name": "fontSize",
+          "displayName": "Font size",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "grid.fontSize"
+        },
+        "Italic": {
+          "FormattingType": "ToggleSwitch",
+          "name": "italic",
+          "displayName": "Italic",
+          "description": null,
+          "value": false,
+          "InternalPropertyName": "grid.italic"
+        },
+        "Bold": {
+          "FormattingType": "ToggleSwitch",
+          "name": "bold",
+          "displayName": "Bold",
+          "description": null,
+          "value": false,
+          "InternalPropertyName": "grid.bold"
+        },
+        "TextColor": {
+          "FormattingType": "ColorPicker",
+          "name": "fontColor",
+          "displayName": "Text color",
+          "description": null,
+          "value": "",
+          "InternalPropertyName": "grid.fontColor"
+        },
+        "BackgroundColor": {
+          "FormattingType": "ColorPicker",
+          "name": "backColor",
+          "displayName": "Background color",
+          "description": null,
+          "value": "",
+          "InternalPropertyName": "grid.backColor"
+        },
+        "BorderColor": {
+          "FormattingType": "ColorPicker",
+          "name": "borderColor",
+          "displayName": "Border color",
+          "description": null,
+          "value": "",
+          "InternalPropertyName": "grid.borderColor"
+        },
+        "SelectedCellColor": {
+          "FormattingType": "ColorPicker",
+          "name": "selectorColor",
+          "displayName": "Selected cell color",
+          "description": null,
+          "value": "",
+          "InternalPropertyName": "grid.selectorColor"
+        },
+        "SelectedCellBorderColor": {
+          "FormattingType": "ColorPicker",
+          "name": "selectorBorderColor",
+          "displayName": "Selected cell border color",
+          "description": null,
+          "value": "",
+          "InternalPropertyName": "grid.selectorBorderColor"
+        },
+        "CellBackgroundOpacity": {
+          "FormattingType": "Slider",
+          "name": "gridOpacity",
+          "displayName": "Cell background opacity",
+          "description": "Determines the background opacity of all cells in the grid from a scale of 0% - 100%",
+          "value": 0,
+          "InternalPropertyName": "grid.gridOpacity"
+        },
+        "TopBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "top",
+          "displayName": "Top border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "grid.top"
+        },
+        "RightBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "right",
+          "displayName": "Right border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "grid.right"
+        },
+        "BottomBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "bottom",
+          "displayName": "Bottom border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "grid.bottom"
+        },
+        "LeftBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "left",
+          "displayName": "Left border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "grid.left"
+        },
+        "ShowColumnAndRowIndices": {
+          "FormattingType": "ToggleSwitch",
+          "name": "numbers",
+          "displayName": "Show column and row indices",
+          "description": null,
+          "value": false,
+          "InternalPropertyName": "grid.numbers"
+        }
+      }
+    },
+    "ColumnHeaders": {
+      "Styling": {
+        "FontFamily": {
+          "FormattingType": "FontPicker",
+          "name": "fontFamily",
+          "displayName": "Font family",
+          "description": null,
+          "value": "Arial",
+          "InternalPropertyName": "columnHeaders.fontFamily"
+        },
+        "FontSize": {
+          "FormattingType": "NumUpDown",
+          "name": "fontSize",
+          "displayName": "Font size",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "columnHeaders.fontSize"
+        },
+        "Italic": {
+          "FormattingType": "ToggleSwitch",
+          "name": "italic",
+          "displayName": "Italic",
+          "description": null,
+          "value": false,
+          "InternalPropertyName": "columnHeaders.italic"
+        },
+        "Bold": {
+          "FormattingType": "ToggleSwitch",
+          "name": "bold",
+          "displayName": "Bold",
+          "description": null,
+          "value": false,
+          "InternalPropertyName": "columnHeaders.bold"
+        },
+        "TextColor": {
+          "FormattingType": "ColorPicker",
+          "name": "fontColor",
+          "displayName": "Text color",
+          "description": null,
+          "value": "",
+          "InternalPropertyName": "columnHeaders.fontColor"
+        },
+        "BackgroundColor": {
+          "FormattingType": "ColorPicker",
+          "name": "backColor",
+          "displayName": "Background color",
+          "description": null,
+          "value": "",
+          "InternalPropertyName": "columnHeaders.backColor"
+        },
+        "TextAlignment": {
+          "FormattingType": "AlignmentGroup",
+          "name": "textAlignment",
+          "displayName": null,
+          "description": null,
+          "value": "initial",
+          "InternalPropertyName": "columnHeaders.textAlignment"
+        },
+        "BorderColor": {
+          "FormattingType": "ColorPicker",
+          "name": "borderColor",
+          "displayName": "Border color",
+          "description": null,
+          "value": "",
+          "InternalPropertyName": "columnHeaders.borderColor"
+        },
+        "TopBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "top",
+          "displayName": "Top border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "columnHeaders.top"
+        },
+        "RightBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "right",
+          "displayName": "Right border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "columnHeaders.right"
+        },
+        "BottomBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "bottom",
+          "displayName": "Bottom border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "columnHeaders.bottom"
+        },
+        "LeftBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "left",
+          "displayName": "Left border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "columnHeaders.left"
+        }
+      },
+      "DynamicHeaders": {
+        "EnableDynamicHeaders": {
+          "FormattingType": "ToggleSwitch",
+          "name": "dynamicHeaderTopLevel",
+          "displayName": "Enable dynamic headers",
+          "description": null,
+          "value": false,
+          "InternalPropertyName": "columnHeaders.dynamicHeaderTopLevel"
+        },
+        "DynamicHeaderValue": {
+          "FormattingType": "TextInput",
+          "name": "dynamicHeader",
+          "displayName": "Dynamic header value",
+          "description": null,
+          "value": null,
+          "InternalPropertyName": "columnHeaders.dynamicHeader"
+        },
+        "DynamicHeaderPosition": {
+          "FormattingType": "ItemDropdown",
+          "name": "dynamicHeaderPosition",
+          "displayName": "Dynamic header placement",
+          "description": "Determines the placement of the dynamic header text relative to the existing label",
+          "value": "prepend",
+          "InternalPropertyName": "columnHeaders.dynamicHeaderPosition"
+        }
+      }
+    },
+    "RowHeaders": {
+      "Styling": {
+        "FontFamily": {
+          "FormattingType": "FontPicker",
+          "name": "fontFamily",
+          "displayName": "Font family",
+          "description": "Font family for row headers",
+          "value": "Arial",
+          "InternalPropertyName": "rowHeaders.fontFamily"
+        },
+        "FontSize": {
+          "FormattingType": "NumUpDown",
+          "name": "fontSize",
+          "displayName": "Font size",
+          "description": "Font size for row headers",
+          "value": 0,
+          "InternalPropertyName": "rowHeaders.fontSize"
+        },
+        "Italic": {
+          "FormattingType": "ToggleSwitch",
+          "name": "italic",
+          "displayName": "Italic",
+          "description": null,
+          "value": false,
+          "InternalPropertyName": "rowHeaders.italic"
+        },
+        "Bold": {
+          "FormattingType": "ToggleSwitch",
+          "name": "bold",
+          "displayName": "Bold",
+          "description": null,
+          "value": false,
+          "InternalPropertyName": "rowHeaders.bold"
+        },
+        "TextColor": {
+          "FormattingType": "ColorPicker",
+          "name": "fontColor",
+          "displayName": "Text color",
+          "description": "Text color for row headers",
+          "value": "",
+          "InternalPropertyName": "rowHeaders.fontColor"
+        },
+        "BackgroundColor": {
+          "FormattingType": "ColorPicker",
+          "name": "backColor",
+          "displayName": "Background color",
+          "description": "Fill color for row headers",
+          "value": "",
+          "InternalPropertyName": "rowHeaders.backColor"
+        },
+        "TextAlignment": {
+          "FormattingType": "AlignmentGroup",
+          "name": "textAlignment",
+          "displayName": null,
+          "description": null,
+          "value": "initial",
+          "InternalPropertyName": "rowHeaders.textAlignment"
+        },
+        "BorderColor": {
+          "FormattingType": "ColorPicker",
+          "name": "borderColor",
+          "displayName": "Border color",
+          "description": "Border color for row headers",
+          "value": "",
+          "InternalPropertyName": "rowHeaders.borderColor"
+        },
+        "TopBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "top",
+          "displayName": "Top border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "rowHeaders.top"
+        },
+        "RightBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "right",
+          "displayName": "Right border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "rowHeaders.right"
+        },
+        "BottomBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "bottom",
+          "displayName": "Bottom border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "rowHeaders.bottom"
+        },
+        "LeftBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "left",
+          "displayName": "Left border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "rowHeaders.left"
+        }
+      },
+      "HeaderIndentation": {
+        "TextIndentation": {
+          "FormattingType": "ToggleSwitch",
+          "name": "rowHeaderIndentation",
+          "displayName": "Text indentation",
+          "description": null,
+          "value": false,
+          "InternalPropertyName": "rowHeaders.rowHeaderIndentation"
+        },
+        "IndentationString": {
+          "FormattingType": "TextInput",
+          "name": "rowHeaderIndentationSymbol",
+          "displayName": "Indentation string",
+          "description": "String values used for row header indentation",
+          "value": ">",
+          "InternalPropertyName": "rowHeaders.rowHeaderIndentationSymbol"
+        }
+      }
+    },
+    "Measures": {
+      "Configuration": {
+        "MeasureType": {
+          "FormattingType": "ItemDropdown",
+          "name": "measureType",
+          "displayName": "Measure type",
+          "description": "Decides the type of the chosen measure",
+          "value": "Measure",
+          "InternalPropertyName": "measures.measureType"
+        },
+        "TrueStateWritebackValue": {
+          "FormattingType": "TextInput",
+          "name": "booleanTrueValue",
+          "displayName": "True state, writeback value",
+          "description": "The value to use when a boolean measure is true.",
+          "value": "true",
+          "InternalPropertyName": "measures.booleanTrueValue"
+        },
+        "FalseStateWritebackValue": {
+          "FormattingType": "TextInput",
+          "name": "booleanFalseValue",
+          "displayName": "False state, writeback value",
+          "description": "The value to use when a boolean measure is false.",
+          "value": "false",
+          "InternalPropertyName": "measures.booleanFalseValue"
+        }
+      }
+    },
+    "ValuesAndFormatting": {
+      "General": {
+        "ShowMeasureInRow": {
+          "FormattingType": "ToggleSwitch",
+          "name": "showMeasureInRow",
+          "displayName": "Show measure in row",
+          "description": "Moves measure dimensions from columns to rows",
+          "value": false,
+          "InternalPropertyName": "values.showMeasureInRow"
+        },
+        "ShowEmptyValues": {
+          "FormattingType": "ItemDropdown",
+          "name": "showEmptyValues",
+          "displayName": "Show empty dimensions for",
+          "description": "Determines visibility of dimensions that only have blank values. Note, hidden dimensions are still processed by accoPLANNING. If you encounter slow start-up times with this setting turned off, turn it on and verify the data given by your measures",
+          "value": "true",
+          "InternalPropertyName": "values.showEmptyValues"
+        },
+        "ApplyNonWriteableStylesToLabels": {
+          "FormattingType": "ItemDropdown",
+          "name": "applyToLabels",
+          "displayName": "Apply non-writeable styles to labels",
+          "description": "Applies the color values from the non-writeable settings to the measure labels",
+          "value": "",
+          "InternalPropertyName": "values.applyToLabels"
+        },
+        "ApplyWriteableStylesToLabels": {
+          "FormattingType": "ItemDropdown",
+          "name": "applySecondaryToLabels",
+          "displayName": "Apply writeable styles to labels",
+          "description": "Applies the color values from the writeable settings to the measure labels",
+          "value": "",
+          "InternalPropertyName": "values.applySecondaryToLabels"
+        }
+      },
+      "Formatting": {
+        "Aggregation": {
+          "FormattingType": "ItemDropdown",
+          "name": "aggregation",
+          "displayName": "Aggregation",
+          "description": "The aggregation method used for subtotals and grand totals (no effect if both are disabled)",
+          "value": "weightedAverage",
+          "InternalPropertyName": "values.aggregation"
+        },
+        "AggregationWeight": {
+          "FormattingType": "ItemDropdown",
+          "name": "aggregationWeight",
+          "displayName": "Aggregation Weight",
+          "description": "The measure used as weight in the calculation of weighted averages aggregation method",
+          "value": "_.first(this.aggregationWeightItems)",
+          "InternalPropertyName": "values.aggregationWeight"
+        },
+        "ShowBlankValuesAs": {
+          "FormattingType": "TextInput",
+          "name": "nullValue",
+          "displayName": "Show blank values as",
+          "description": "Displays the given value within all cells with null values",
+          "value": "0",
+          "InternalPropertyName": "values.nullValue"
+        },
+        "DecimalPlaces": {
+          "FormattingType": "NumUpDown",
+          "name": "decimalPlaces",
+          "displayName": "Decimal Places",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "values.decimalPlaces"
+        },
+        "CurrencySymbol": {
+          "FormattingType": "TextInput",
+          "name": "currencySymbol",
+          "displayName": "Currency symbol",
+          "description": "Prepends a symbol to every cell, primarily used for currencies",
+          "value": null,
+          "InternalPropertyName": "values.currencySymbol"
+        },
+        "PrependCurrencySymbol": {
+          "FormattingType": "ToggleSwitch",
+          "name": "currencySymbolPrepend",
+          "displayName": "Prepend currency symbol",
+          "description": "If disabled, currency symbol is appended to the value",
+          "value": true,
+          "InternalPropertyName": "values.currencySymbolPrepend"
+        },
+        "UseDataModelFormatting": {
+          "FormattingType": "ToggleSwitch",
+          "name": "useDataModelFormatting",
+          "displayName": "Use data model formatting",
+          "description": "uses data model formatting, ignoring custom values",
+          "value": false,
+          "InternalPropertyName": "values.useDataModelFormatting"
+        },
+        "ReductionForLargeNumbers": {
+          "FormattingType": "ToggleSwitch",
+          "name": "shortNumberInput",
+          "displayName": "Use large number reduction input",
+          "description": "Uses number reduction for 1K, 1M, 1B etc.",
+          "value": false,
+          "InternalPropertyName": "values.shortNumberInput"
+        }
+      },
+      "Styling": {
+        "FontFamily": {
+          "FormattingType": "FontPicker",
+          "name": "fontFamily",
+          "displayName": "Font family",
+          "description": null,
+          "value": "Arial",
+          "InternalPropertyName": "values.fontFamily"
+        },
+        "FontSize": {
+          "FormattingType": "NumUpDown",
+          "name": "fontSize",
+          "displayName": "Font size",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "values.fontSize"
+        },
+        "Italic": {
+          "FormattingType": "ToggleSwitch",
+          "name": "italic",
+          "displayName": "Italic",
+          "description": null,
+          "value": false,
+          "InternalPropertyName": "values.italic"
+        },
+        "Bold": {
+          "FormattingType": "ToggleSwitch",
+          "name": "bold",
+          "displayName": "Bold",
+          "description": null,
+          "value": false,
+          "InternalPropertyName": "values.bold"
+        },
+        "NonWriteableTextColor": {
+          "FormattingType": "ColorPicker",
+          "name": "fontColorPrimary",
+          "displayName": "Non-writeable text color",
+          "description": "Text color on cells that are ineligible for editing",
+          "value": "",
+          "InternalPropertyName": "values.fontColorPrimary"
+        },
+        "NonWriteableBackgroundColor": {
+          "FormattingType": "ColorPicker",
+          "name": "backColorPrimary",
+          "displayName": "Non-writeable background color",
+          "description": "Fill color on cells that are ineligible for editing",
+          "value": "",
+          "InternalPropertyName": "values.backColorPrimary"
+        },
+        "WriteableTextColor": {
+          "FormattingType": "ColorPicker",
+          "name": "fontColorSecondary",
+          "displayName": "Writeable text color",
+          "description": "Text color on cells that can be edited",
+          "value": "",
+          "InternalPropertyName": "values.fontColorSecondary"
+        },
+        "WriteableBackgroundColor": {
+          "FormattingType": "ColorPicker",
+          "name": "backColorSecondary",
+          "displayName": "Writeable background color",
+          "description": "Fill color on cells that can be edited",
+          "value": "#FFFACD",
+          "InternalPropertyName": "values.backColorSecondary"
+        },
+        "TextAlignment": {
+          "FormattingType": "AlignmentGroup",
+          "name": "textAlignment",
+          "displayName": null,
+          "description": null,
+          "value": "initial",
+          "InternalPropertyName": "values.textAlignment"
+        }
+      }
+    },
+    "Subtotals": {
+      "General": {
+        "EnableSubtotals": {
+          "FormattingType": "ToggleSwitch",
+          "name": "subtotalsTopLevel",
+          "displayName": "Enable sub totals",
+          "description": null,
+          "value": true,
+          "InternalPropertyName": "subTotals.subtotalsTopLevel"
+        },
+        "ShowSubtotalsFor": {
+          "FormattingType": "ItemDropdown",
+          "name": "subtotals",
+          "displayName": "Show subtotals for",
+          "description": null,
+          "value": "on",
+          "InternalPropertyName": "subTotals.subtotals"
+        },
+        "ApplyNonWriteableStylesToLabels": {
+          "FormattingType": "ItemDropdown",
+          "name": "applyToLabels",
+          "displayName": "Apply non-writeable styles to labels",
+          "description": null,
+          "value": "",
+          "InternalPropertyName": "subTotals.applyToLabels"
+        },
+        "ApplyWriteableStylesToLabels": {
+          "FormattingType": "ItemDropdown",
+          "name": "applySecondaryToLabels",
+          "displayName": "Apply writeable styles to labels",
+          "description": null,
+          "value": "",
+          "InternalPropertyName": "subTotals.applySecondaryToLabels"
+        }
+      },
+      "Styling": {
+        "FontFamily": {
+          "FormattingType": "FontPicker",
+          "name": "fontFamily",
+          "displayName": "Font family",
+          "description": null,
+          "value": "Arial",
+          "InternalPropertyName": "subTotals.fontFamily"
+        },
+        "FontSize": {
+          "FormattingType": "NumUpDown",
+          "name": "fontSize",
+          "displayName": "Font size",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "subTotals.fontSize"
+        },
+        "Italic": {
+          "FormattingType": "ToggleSwitch",
+          "name": "italic",
+          "displayName": "Italic",
+          "description": null,
+          "value": false,
+          "InternalPropertyName": "subTotals.italic"
+        },
+        "Bold": {
+          "FormattingType": "ToggleSwitch",
+          "name": "bold",
+          "displayName": "Bold",
+          "description": null,
+          "value": false,
+          "InternalPropertyName": "subTotals.bold"
+        },
+        "TextAlignment": {
+          "FormattingType": "AlignmentGroup",
+          "name": "textAlignment",
+          "displayName": null,
+          "description": null,
+          "value": "initial",
+          "InternalPropertyName": "subTotals.textAlignment"
+        },
+        "NonWriteableTextColor": {
+          "FormattingType": "ColorPicker",
+          "name": "fontColorPrimary",
+          "displayName": "Non-writeable text color",
+          "description": null,
+          "value": "",
+          "InternalPropertyName": "subTotals.fontColorPrimary"
+        },
+        "NonWriteableBackgroundColor": {
+          "FormattingType": "ColorPicker",
+          "name": "backColorPrimary",
+          "displayName": "Non-writeable background color",
+          "description": null,
+          "value": "",
+          "InternalPropertyName": "subTotals.backColorPrimary"
+        },
+        "WriteableTextColor": {
+          "FormattingType": "ColorPicker",
+          "name": "fontColorSecondary",
+          "displayName": "Writeable text color",
+          "description": null,
+          "value": "",
+          "InternalPropertyName": "subTotals.fontColorSecondary"
+        },
+        "WriteableBackgroundColor": {
+          "FormattingType": "ColorPicker",
+          "name": "backColorSecondary",
+          "displayName": "Writeable background color",
+          "description": null,
+          "value": "",
+          "InternalPropertyName": "subTotals.backColorSecondary"
+        },
+        "Border": {
+          "FormattingType": "ItemDropdown",
+          "name": "border",
+          "displayName": "Border",
+          "description": null,
+          "value": "default",
+          "InternalPropertyName": "subTotals.border"
+        },
+        "BorderColor": {
+          "FormattingType": "ColorPicker",
+          "name": "borderColor",
+          "displayName": "Border color",
+          "description": null,
+          "value": "#e9e9e9",
+          "InternalPropertyName": "subTotals.borderColor"
+        },
+        "TopBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "top",
+          "displayName": "Top border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "subTotals.top"
+        },
+        "RightBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "right",
+          "displayName": "Right border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "subTotals.right"
+        },
+        "BottomBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "bottom",
+          "displayName": "Bottom border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "subTotals.bottom"
+        },
+        "LeftBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "left",
+          "displayName": "Left border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "subTotals.left"
+        }
+      }
+    },
+    "GrandTotals": {
+      "General": {
+        "EnableGrandTotals": {
+          "FormattingType": "ToggleSwitch",
+          "name": "grandTotalsTopLevel",
+          "displayName": "Enable grand totals",
+          "description": null,
+          "value": true,
+          "InternalPropertyName": "total.grandTotalsTopLevel"
+        },
+        "ShowGrandTotalsFor": {
+          "FormattingType": "ItemDropdown",
+          "name": "showGrandTotals",
+          "displayName": "Show grand totals for",
+          "description": null,
+          "value": "on",
+          "InternalPropertyName": "total.showGrandTotals"
+        },
+        "ApplyStylesToLabels": {
+          "FormattingType": "ItemDropdown",
+          "name": "applyToLabels",
+          "displayName": "Apply styles to labels",
+          "description": null,
+          "value": "",
+          "InternalPropertyName": "total.applyToLabels"
+        }
+      },
+      "Styling": {
+        "FontFamily": {
+          "FormattingType": "FontPicker",
+          "name": "fontFamily",
+          "displayName": "Font family",
+          "description": null,
+          "value": "Arial",
+          "InternalPropertyName": "total.fontFamily"
+        },
+        "FontSize": {
+          "FormattingType": "NumUpDown",
+          "name": "fontSize",
+          "displayName": "Font size",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "total.fontSize"
+        },
+        "Italic": {
+          "FormattingType": "ToggleSwitch",
+          "name": "italic",
+          "displayName": "Italic",
+          "description": null,
+          "value": false,
+          "InternalPropertyName": "total.italic"
+        },
+        "Bold": {
+          "FormattingType": "ToggleSwitch",
+          "name": "bold",
+          "displayName": "Bold",
+          "description": null,
+          "value": false,
+          "InternalPropertyName": "total.bold"
+        },
+        "TextColor": {
+          "FormattingType": "ColorPicker",
+          "name": "fontColor",
+          "displayName": "Text color",
+          "description": null,
+          "value": "",
+          "InternalPropertyName": "total.fontColor"
+        },
+        "BackgroundColor": {
+          "FormattingType": "ColorPicker",
+          "name": "backColor",
+          "displayName": "Background color",
+          "description": null,
+          "value": "",
+          "InternalPropertyName": "total.backColor"
+        },
+        "TextAlignment": {
+          "FormattingType": "AlignmentGroup",
+          "name": "textAlignment",
+          "displayName": null,
+          "description": null,
+          "value": "initial",
+          "InternalPropertyName": "total.textAlignment"
+        },
+        "Border": {
+          "FormattingType": "ItemDropdown",
+          "name": "border",
+          "displayName": "Border",
+          "description": null,
+          "value": "default",
+          "InternalPropertyName": "total.border"
+        },
+        "BorderColor": {
+          "FormattingType": "ColorPicker",
+          "name": "borderColor",
+          "displayName": "Border color",
+          "description": null,
+          "value": "#e9e9e9",
+          "InternalPropertyName": "total.borderColor"
+        },
+        "TopBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "top",
+          "displayName": "Top border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "total.top"
+        },
+        "RightBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "right",
+          "displayName": "Right border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "total.right"
+        },
+        "BottomBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "bottom",
+          "displayName": "Bottom border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "total.bottom"
+        },
+        "LeftBorderWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "left",
+          "displayName": "Left border width",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "total.left"
+        }
+      }
+    },
+    "CellDropdown": {
+      "CustomSize": {
+        "AllowCustomWidthAndHeight": {
+          "FormattingType": "ToggleSwitch",
+          "name": "allowCustomWidthAndHeightToDropdownCells",
+          "displayName": "Allow custom width & height",
+          "description": null,
+          "value": false,
+          "InternalPropertyName": "cellDropdown.allowCustomWidthAndHeightToDropdownCells"
+        },
+        "FontSize": {
+          "FormattingType": "NumUpDown",
+          "name": "dropdownFontSize",
+          "displayName": "Font size",
+          "description": null,
+          "value": 12,
+          "InternalPropertyName": "cellDropdown.dropdownFontSize"
+        },
+        "CustomWidth": {
+          "FormattingType": "NumUpDown",
+          "name": "customDropdownWidth",
+          "displayName": "Custom width (px)",
+          "description": null,
+          "value": 240,
+          "InternalPropertyName": "cellDropdown.customDropdownWidth"
+        },
+        "CustomHeight": {
+          "FormattingType": "NumUpDown",
+          "name": "customDropdownHeight",
+          "displayName": "Custom height (px)",
+          "description": null,
+          "value": 120,
+          "InternalPropertyName": "cellDropdown.customDropdownHeight"
+        }
+      },
+      "ByField": {
+        "DropdownMeasure": {
+          "FormattingType": "TextInput",
+          "name": "dropdownMeasure",
+          "displayName": "Dropdown Measure",
+          "description": null,
+          "value": null,
+          "InternalPropertyName": "cellDropdown.dropdownMeasure"
+        },
+        "MenuItemSeparator": {
+          "FormattingType": "TextInput",
+          "name": "dropdownItemSeparator",
+          "displayName": "Menu item separator",
+          "description": "The symbol that separates dropdown options '100|200|500'",
+          "value": "|",
+          "InternalPropertyName": "cellDropdown.dropdownItemSeparator"
+        },
+        "AllowCustomValues": {
+          "FormattingType": "ToggleSwitch",
+          "name": "dropdownAllowCustomInputs",
+          "displayName": "Allow custom values in cells w/ dropdown",
+          "description": "Allows inputs in cells outside the dropdown choices",
+          "value": false,
+          "InternalPropertyName": "cellDropdown.dropdownAllowCustomInputs"
+        },
+        "EnableKeyValuePairs": {
+          "FormattingType": "ToggleSwitch",
+          "name": "enableDropdownKV",
+          "displayName": "Enable key-value pairing",
+          "description": "Allows dropdown choices to have a value displayed to the user and a key that is used on submission. E.g. for products and Ids",
+          "value": false,
+          "InternalPropertyName": "cellDropdown.enableDropdownKV"
+        },
+        "KeyValueSeparator": {
+          "FormattingType": "TextInput",
+          "name": "dropdownKVSeparator",
+          "displayName": "Key value separator",
+          "description": "The symbol that separates keys and values within dropdown choices '10;The Phantom Dropdown|20;Attack of the Dropdown|30;Revenge of the Dropdown'",
+          "value": ";",
+          "InternalPropertyName": "cellDropdown.dropdownKVSeparator"
+        },
+        "ShowDisplayValueInCells": {
+          "FormattingType": "ToggleSwitch",
+          "name": "dropdownShowDisplayValue",
+          "displayName": "Show the display value in cells",
+          "description": "Shows the display value in cells while submitting the key",
+          "value": true,
+          "InternalPropertyName": "cellDropdown.dropdownShowDisplayValue"
+        }
+      }
+    },
+    "Comments": {
+      "General": {
+        "MaxCommentLength": {
+          "FormattingType": "NumUpDown",
+          "name": "stringLength",
+          "displayName": "Max comment length",
+          "description": null,
+          "value": 0,
+          "InternalPropertyName": "comments.stringLength"
+        },
+        "CommentDelimiter": {
+          "FormattingType": "TextInput",
+          "name": "commentDelimiter",
+          "displayName": "Comment delimiter",
+          "description": "The symbol to delimit single strings into distinct comments, 'A New Comment|The Comment Strikes Back|Return of the Comment'",
+          "value": "|",
+          "InternalPropertyName": "comments.commentDelimiter"
+        }
+      },
+      "Configuration": {
+        "MeasureToDisplayOn": {
+          "FormattingType": "ItemDropdown",
+          "name": "commentApplyTo",
+          "displayName": "Measure to display on",
+          "description": "Which measure to show comment flags or metadata from the comment field on, and to write back to",
+          "value": "allMeasures",
+          "InternalPropertyName": "comments.commentApplyTo"
+        },
+        "CommentType": {
+          "FormattingType": "ItemDropdown",
+          "name": "commentType",
+          "displayName": "Type",
+          "description": "Determines whether the comment field is a displayed writeback value, a non-displayed writeback value, or metadata",
+          "value": "comment",
+          "InternalPropertyName": "comments.commentType"
+        }
+      }
+    },
+    "Validation": {
+      "ByField": {
+        "MinValue": {
+          "FormattingType": "NumUpDown",
+          "name": "minValue",
+          "displayName": "Min value",
+          "description": "The minimum allowed value (inclusive)",
+          "value": null,
+          "InternalPropertyName": "planningValidation.minValue"
+        },
+        "MaxValue": {
+          "FormattingType": "NumUpDown",
+          "name": "maxValue",
+          "displayName": "Max value",
+          "description": "The maximum allowed value (inclusive)",
+          "value": null,
+          "InternalPropertyName": "planningValidation.maxValue"
+        }
+      }
+    },
+    "Splashing": {
+      "Settings": {
+        "EnableSplashing": {
+          "FormattingType": "ToggleSwitch",
+          "name": "enableSplashing",
+          "displayName": "Enable splashing",
+          "description": "Splashing allows for inputting values over a range of cells with a given distribution method or measures",
+          "value": true,
+          "InternalPropertyName": "splashing.enableSplashing"
+        },
+        "EnableInputsOnParentCells": {
+          "FormattingType": "ToggleSwitch",
+          "name": "enableParentLevelEntry",
+          "displayName": "Enable inputs on parent cells",
+          "description": "Enables value inputs on aggregation cells. Output affects all cells within the parent's lineage.",
+          "value": true,
+          "InternalPropertyName": "splashing.enableParentLevelEntry"
+        },
+        "DefaultDistributionMethod": {
+          "FormattingType": "ItemDropdown",
+          "name": "defaultSplashing",
+          "displayName": "Default distribution method",
+          "description": "Uses the given behavior when conditions for splashing are met",
+          "value": "popup",
+          "InternalPropertyName": "splashing.defaultSplashing"
+        },
+        "DefaultSplashingMeasure": {
+          "FormattingType": "ItemDropdown",
+          "name": "defaultMeasure",
+          "displayName": "Default splashing measure",
+          "description": "Uses the given behavior when conditions for splashing are met",
+          "value": "popup",
+          "InternalPropertyName": "splashing.defaultMeasure"
+        },
+        "DefaultRoundingMethod": {
+          "FormattingType": "ItemDropdown",
+          "name": "defaultRounding",
+          "displayName": "Default rounding method",
+          "description": "Uses the given rounding method for splashing if one is chosen.",
+          "value": "noRound",
+          "InternalPropertyName": "splashing.defaultRounding"
+        }
+      }
+    },
+    "CellLocks": {
+      "CellLocks": {
+        "CellLockMode": {
+          "FormattingType": "ItemDropdown",
+          "name": "lockMode",
+          "displayName": "Cell lock mode",
+          "description": "OR locks if any measure is locked. AND locks only if all measures are locked.",
+          "value": "AND",
+          "InternalPropertyName": "cellLocks.lockMode"
+        },
+        "CommentsOnLockedCells": {
+          "FormattingType": "ToggleSwitch",
+          "name": "commentsOnLockedCells",
+          "displayName": "Comments on locked cells",
+          "description": "Allow user to make comments on locked cells",
+          "value": false,
+          "InternalPropertyName": "cellLocks.commentsOnLockedCells"
+        }
+      },
+      "Configuration": {
+        "MeasureToLockOn": {
+          "FormattingType": "ItemDropdown",
+          "name": "lockCellApplyTo",
+          "displayName": "Measure to lock on",
+          "description": "Which measure should show this lock cell indicator",
+          "value": "allMeasures",
+          "InternalPropertyName": "cellLocks.lockCellApplyTo"
+        }
+      }
+    },
+    "UserPermissions": {
+      "Settings": {
+        "AllowUserCellLock": {
+          "FormattingType": "ToggleSwitch",
+          "name": "allowUserCellLock",
+          "displayName": "Allow user cell lock",
+          "description": null,
+          "value": true,
+          "InternalPropertyName": "administrator.allowUserCellLock"
+        },
+        "AllowUserCellUnlock": {
+          "FormattingType": "ToggleSwitch",
+          "name": "allowUserCellUnlock",
+          "displayName": "Allow user cell unlock",
+          "description": null,
+          "value": true,
+          "InternalPropertyName": "administrator.allowUserCellUnlock"
+        },
+        "AllowUserExporting": {
+          "FormattingType": "ToggleSwitch",
+          "name": "allowUserExporting",
+          "displayName": "Allow user exporting",
+          "description": "Allow user exporting, Enables the exporting button when not in editing mode (aka Read view)",
+          "value": true,
+          "InternalPropertyName": "administrator.allowUserExporting"
+        },
+        "AllowUserToHideDimensions": {
+          "FormattingType": "ToggleSwitch",
+          "name": "allowUserDimensionHiding",
+          "displayName": "Allow user to hide dimensions",
+          "description": null,
+          "value": true,
+          "InternalPropertyName": "administrator.allowUserDimensionHiding"
+        },
+        "AllowUserToUnhideDimensions": {
+          "FormattingType": "ToggleSwitch",
+          "name": "allowUserDimensionUnhiding",
+          "displayName": "Allow user to unhide dimensions",
+          "description": null,
+          "value": true,
+          "InternalPropertyName": "administrator.allowUserDimensionUnhiding"
+        },
+        "AllowAdvancedOptionsInReadMode": {
+          "FormattingType": "ToggleSwitch",
+          "name": "allowAdvancedOptions",
+          "displayName": "Allow access to adv. options in read mode",
+          "description": "Advanced options allow users to create custom dimensions, measures, adjust customization and more. By default this is only accessible in Advanced Edit. Any changes the user makes in advanced edit can only be persisted in edit mode in the report",
+          "value": false,
+          "InternalPropertyName": "administrator.allowAdvancedOptions"
+        },
+        "AllowUserToCommentInReadMode": {
+          "FormattingType": "ToggleSwitch",
+          "name": "allowUserComment",
+          "displayName": "Allow user to comment in read mode",
+          "description": "Allows the user to comment in reading mode. When disabled allows users to read comments but not write new ones. Works well in conjunction with Reporting Mode.",
+          "value": true,
+          "InternalPropertyName": "administrator.allowUserComment"
+        },
+        "ReportingMode": {
+          "FormattingType": "ToggleSwitch",
+          "name": "reportingMode",
+          "displayName": "Reporting Mode",
+          "description": "Reporting mode disables the selector, editing capability & writeback save functions.",
+          "value": false,
+          "InternalPropertyName": "administrator.reportingMode"
+        }
+      }
+    }
+  },
+  "CustomVisualSettings": {
+    "CustomDimensions": {
+      "FormattingType": "TextInput",
+      "name": "customDimensions",
+      "displayName": "Custom Dimensions",
+      "description": null,
+      "value": "",
+      "InternalPropertyName": "hiddenProperties.customDimensions",
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": "",
+        "ContentType": "application/json",
+        "DecodedValue": {
+          "Type": "object",
+          "Required": [
+            "_array"
+          ],
+          "Properties": {
+            "_array": {
+              "Type": "array",
+              "Items": {
+                "Type": "object",
+                "Required": [
+                  "_name",
+                  "_tuple",
+                  "_selectedOptions",
+                  "_isRow",
+                  "_position",
+                  "_subtotalExclusion",
+                  "_repeat"
+                ],
+                "Properties": {
+                  "_name": {
+                    "Type": "string"
+                  },
+                  "_tuple": {
+                    "Type": "array",
+                    "Items": {
+                      "Type": "string"
+                    }
+                  },
+                  "_selectedOptions": {
+                    "Type": "array",
+                    "Items": {
+                      "Type": "object"
+                    }
+                  },
+                  "_isRow": {
+                    "Type": "boolean"
+                  },
+                  "_position": {
+                    "Type": "integer"
+                  },
+                  "_subtotalExclusion": {
+                    "Type": "boolean"
+                  },
+                  "_repeat": {
+                    "Type": "boolean"
+                  },
+                  "_hierarchyData": {
+                    "Type": [
+                      "object",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "CustomMeasures": {
+      "FormattingType": "TextInput",
+      "name": "customMeasures",
+      "displayName": "Custom measures",
+      "description": null,
+      "value": "[]",
+      "InternalPropertyName": "hiddenProperties.customMeasures",
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": "[]",
+        "ContentType": "application/json",
+        "DecodedValue": {
+          "Type": "array",
+          "Items": {
+            "Type": "object",
+            "Required": [
+              "uniqueName",
+              "formula",
+              "individual",
+              "attachedDim",
+              "sortIndex",
+              "format",
+              "selectedOptions"
+            ],
+            "Properties": {
+              "uniqueName": {
+                "Type": "string"
+              },
+              "formula": {
+                "Type": "string"
+              },
+              "individual": {
+                "Type": "boolean"
+              },
+              "attachedDim": {
+                "Type": "array",
+                "Items": {
+                  "Type": "string"
+                }
+              },
+              "sortIndex": {
+                "Type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "format": {
+                "Type": "object",
+                "Properties": {
+                  "name": {
+                    "Type": "string"
+                  },
+                  "decimalPlaces": {
+                    "Type": "integer"
+                  },
+                  "nullValue": {
+                    "Type": "string"
+                  },
+                  "decimalSeparator": {
+                    "Type": "string"
+                  },
+                  "thousandsSeparator": {
+                    "Type": "string"
+                  },
+                  "textAlign": {
+                    "Type": "string"
+                  },
+                  "currencySymbol": {
+                    "Type": "string"
+                  }
+                }
+              },
+              "selectedOptions": {
+                "Type": "array",
+                "Items": {
+                  "Type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "DimensionStyling": {
+      "FormattingType": "TextArea",
+      "name": "dimensionStyling",
+      "displayName": "Dimension styling",
+      "description": null,
+      "value": "[]",
+      "InternalPropertyName": "hiddenProperties.dimensionStyling",
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": "[]",
+        "ContentType": "application/json",
+        "DecodedValue": {
+          "Type": "array",
+          "Items": {
+            "Type": "object",
+            "Required": [
+              "columns",
+              "rows",
+              "styles",
+              "customCSS"
+            ],
+            "Properties": {
+              "columns": {
+                "Type": "array",
+                "Items": {
+                  "Type": "string"
+                }
+              },
+              "rows": {
+                "Type": "array",
+                "Items": {
+                  "Type": "string"
+                }
+              },
+              "styles": {
+                "Type": "object",
+                "Properties": {
+                  "totalStyle": {
+                    "Type": "object"
+                  },
+                  "valueStyle": {
+                    "Type": "object"
+                  },
+                  "headerStyle": {
+                    "Type": "object"
+                  }
+                }
+              },
+              "customCSS": {
+                "Type": "object",
+                "Properties": {
+                  "total": {
+                    "Type": "object"
+                  },
+                  "value": {
+                    "Type": "object"
+                  },
+                  "header": {
+                    "Type": "object"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "MeasureStyling": {
+      "FormattingType": "TextArea",
+      "name": "measureStyling",
+      "displayName": "Measure styling",
+      "description": null,
+      "value": "[]",
+      "InternalPropertyName": "hiddenProperties.measureStyling",
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": "[]",
+        "ContentType": "application/json",
+        "DecodedValue": {
+          "Type": "array",
+          "Items": {
+            "Type": "object",
+            "Required": [
+              "measure",
+              "columns",
+              "rows",
+              "styles",
+              "customCSS"
+            ],
+            "Properties": {
+              "measure": {
+                "Type": "string"
+              },
+              "columns": {
+                "Type": "array",
+                "Items": {
+                  "Type": "string"
+                }
+              },
+              "rows": {
+                "Type": "array",
+                "Items": {
+                  "Type": "string"
+                }
+              },
+              "styles": {
+                "Type": "object"
+              },
+              "customCSS": {
+                "Type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "HiddenMeasures": {
+      "FormattingType": "ReadOnlyText",
+      "name": "hiddenMeasures",
+      "displayName": "Hidden measures",
+      "description": null,
+      "value": "",
+      "InternalPropertyName": "hiddenProperties.hiddenMeasures",
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": "",
+        "ContentType": "application/json",
+        "DecodedValue": {
+          "Type": "array",
+          "Items": {
+            "Type": "object",
+            "Required": [
+              "tuple",
+              "measure"
+            ],
+            "Properties": {
+              "tuple": {
+                "Type": "array",
+                "Items": {
+                  "Type": "string"
+                }
+              },
+              "measure": {
+                "Type": "string"
+              },
+              "order": {
+                "Type": "integer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "FlatViewHiddenColumns": {
+      "FormattingType": "TextInput",
+      "name": "flatViewHiddenColumns",
+      "displayName": "Flat view hidden columns",
+      "description": null,
+      "value": "",
+      "InternalPropertyName": "hiddenProperties.flatViewHiddenColumns",
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": "",
+        "ContentType": "application/json",
+        "DecodedValue": {
+          "Type": "array",
+          "Items": {
+            "Type": "integer",
+            "Minimum": 0
+          }
+        }
+      }
+    },
+    "TableSizes": {
+      "FormattingType": "TextInput",
+      "name": "tableSizes",
+      "displayName": "Flexmonster TableSizes",
+      "description": null,
+      "value": "`{\"rows\":[]",
+      "InternalPropertyName": "hiddenProperties.tableSizes",
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": "{\"rows\":[], \"columns\":[]}",
+        "ContentType": "application/json",
+        "DecodedValue": {
+          "Type": "object",
+          "Properties": {
+            "rows": {
+              "Type": "array",
+              "Items": {
+                "Type": "object"
+              }
+            },
+            "columns": {
+              "Type": "array",
+              "Items": {
+                "Type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Drills": {
+      "FormattingType": "TextInput",
+      "name": "drills",
+      "displayName": "Flexmonster Drills",
+      "description": null,
+      "value": "{}",
+      "InternalPropertyName": "hiddenProperties.drills",
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": "{}",
+        "ContentType": "application/json",
+        "DecodedValue": {
+          "Type": "object",
+          "Properties": {
+            "drillAll": {
+              "Type": "boolean"
+            },
+            "drillAllRows": {
+              "Type": "boolean"
+            },
+            "drillAllColumns": {
+              "Type": "boolean"
+            },
+            "rows": {
+              "Type": "array",
+              "Items": {
+                "Type": "object"
+              }
+            },
+            "columns": {
+              "Type": "array",
+              "Items": {
+                "Type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Expands": {
+      "FormattingType": "TextInput",
+      "name": "expands",
+      "displayName": "Flexmonster Expands",
+      "description": null,
+      "value": "{}",
+      "InternalPropertyName": "hiddenProperties.expands",
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": "{}",
+        "ContentType": "application/json",
+        "DecodedValue": {
+          "Type": "object",
+          "Properties": {
+            "expandAll": {
+              "Type": "boolean"
+            },
+            "expandAllRows": {
+              "Type": "boolean"
+            },
+            "expandAllColumns": {
+              "Type": "boolean"
+            },
+            "rows": {
+              "Type": "array",
+              "Items": {
+                "Type": "object"
+              }
+            },
+            "columns": {
+              "Type": "array",
+              "Items": {
+                "Type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "HiddenRows": {
+      "FormattingType": "TextInput",
+      "name": "hiddenRows",
+      "displayName": "Hidden rows",
+      "description": null,
+      "value": "",
+      "InternalPropertyName": "hiddenProperties.hiddenRows",
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": "",
+        "Encoding": "Semicolon-delimited member unique names"
+      }
+    },
+    "HiddenColumns": {
+      "FormattingType": "TextInput",
+      "name": "hiddenColumns",
+      "displayName": "Hidden columns",
+      "description": null,
+      "value": "",
+      "InternalPropertyName": "hiddenProperties.hiddenColumns",
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": "",
+        "Encoding": "Semicolon-delimited member unique names"
+      }
+    },
+    "SavedTheme": {
+      "FormattingType": "TextInput",
+      "name": "savedTheme",
+      "displayName": "Saved Theme",
+      "description": null,
+      "value": "",
+      "InternalPropertyName": "hiddenProperties.savedTheme",
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": ""
+      }
+    },
+    "LatestSavedVersion": {
+      "FormattingType": "TextInput",
+      "name": "latestSavedVersion",
+      "displayName": "Latest accoPLANNING version used on this instance",
+      "description": null,
+      "value": "",
+      "InternalPropertyName": "hiddenProperties.latestSavedVersion",
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": ""
+      }
+    },
+    "LastKnownHierarchyName": {
+      "FormattingType": "TextInput",
+      "name": "lastKnownHierarchyName",
+      "displayName": "Last known hierarchy name",
+      "description": null,
+      "value": "",
+      "InternalPropertyName": "hiddenProperties.lastKnownHierarchyName",
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": ""
+      }
+    },
+    "LocalStorageReportId": {
+      "FormattingType": "TextInput",
+      "name": "localStorageReportId",
+      "displayName": "set a report ID used ",
+      "description": null,
+      "value": "",
+      "InternalPropertyName": "hiddenProperties.localStorageReportId",
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": ""
+      }
+    },
+    "LegacyCustomDimensions": {
+      "FormattingType": "TextInput",
+      "name": "custom",
+      "displayName": "hidden_customColumn",
+      "description": null,
+      "value": "",
+      "InternalPropertyName": "hiddenProperties.custom",
+      "Deprecated": true,
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": "",
+        "ContentType": "application/json",
+        "DecodedValue": {
+          "Type": "object",
+          "AdditionalProperties": {
+            "Type": "object",
+            "Properties": {
+              "name": {},
+              "level": {
+                "Type": "string"
+              },
+              "rowOrColumn": {
+                "Type": "string",
+                "Enum": [
+                  "row",
+                  "column"
+                ]
+              },
+              "changeOrder": {
+                "Type": "integer"
+              },
+              "position": {
+                "Type": "integer"
+              },
+              "data": {
+                "Type": "object"
+              },
+              "calculation": {
+                "Type": "string"
+              },
+              "repeating": {
+                "Type": "boolean"
+              },
+              "excludeFromTotals": {
+                "Type": "boolean"
+              },
+              "negatedDimension": {
+                "Type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "LegacyRowStyling": {
+      "FormattingType": "TextArea",
+      "name": "rowStyling",
+      "displayName": "(DEPRECATED) Row styling",
+      "description": null,
+      "value": "",
+      "InternalPropertyName": "hiddenProperties.rowStyling",
+      "Deprecated": true,
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": "",
+        "ContentType": "application/json",
+        "DecodedValue": {
+          "Type": "array",
+          "Items": {
+            "Type": "object",
+            "AdditionalProperties": true
+          }
+        }
+      }
+    },
+    "LegacyColumnStyling": {
+      "FormattingType": "TextArea",
+      "name": "columnStyling",
+      "displayName": "(DEPRECATED) Column styling",
+      "description": null,
+      "value": "",
+      "InternalPropertyName": "hiddenProperties.columnStyling",
+      "Deprecated": true,
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": "",
+        "ContentType": "application/json",
+        "DecodedValue": {
+          "Type": "array",
+          "Items": {
+            "Type": "object",
+            "AdditionalProperties": true
+          }
+        }
+      }
+    },
+    "SettingsHaveConverted": {
+      "FormattingType": "ToggleSwitch",
+      "name": "settingsHaveConverted",
+      "displayName": "2. I received transfer confirmation",
+      "description": null,
+      "value": false,
+      "InternalPropertyName": "hiddenProperties.settingsHaveConverted",
+      "Schema": {
+        "Type": "boolean",
+        "DefaultValue": false
+      }
+    },
+    "SettingsTransferredExplicitCheck": {
+      "FormattingType": "ToggleSwitch",
+      "name": "settingsTransferredExplicitCheck",
+      "displayName": "1. Perform transfer",
+      "description": null,
+      "value": false,
+      "InternalPropertyName": "hiddenProperties.settingsTransferredExplicitCheck",
+      "Schema": {
+        "Type": "boolean",
+        "DefaultValue": false
+      }
+    },
+    "ResetMenu": {
+      "FormattingType": "ToggleSwitch",
+      "name": "resetMenu",
+      "displayName": null,
+      "description": null,
+      "value": false,
+      "InternalPropertyName": "hiddenProperties.resetMenu",
+      "Schema": {
+        "Type": "boolean",
+        "DefaultValue": false
+      }
+    },
+    "EncryptedUser": {
+      "FormattingType": "TextInput",
+      "name": "encryptedUser",
+      "displayName": null,
+      "description": null,
+      "value": null,
+      "InternalPropertyName": "planningConnection.encryptedUser",
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": null
+      }
+    },
+    "EncryptedPassword": {
+      "FormattingType": "TextInput",
+      "name": "encryptedPassword",
+      "displayName": null,
+      "description": null,
+      "value": null,
+      "InternalPropertyName": "planningConnection.encryptedPassword",
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": null
+      }
+    },
+    "EncryptedTenantId": {
+      "FormattingType": "TextInput",
+      "name": "encryptedTenantId",
+      "displayName": null,
+      "description": null,
+      "value": null,
+      "InternalPropertyName": "planningConnection.encryptedTenantId",
+      "Schema": {
+        "Type": "string",
+        "DefaultValue": null
+      }
+    }
+  }
+}
