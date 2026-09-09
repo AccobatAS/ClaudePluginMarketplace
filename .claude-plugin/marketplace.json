@@ -4,5 +4,10 @@
     "name": "Accobat A/S",
     "email": "support@accobat.com"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "accotool-ai-configuration",
+      "source": "./Plugins/accotool-ai-configuration"
+    }
+  ]
 }
