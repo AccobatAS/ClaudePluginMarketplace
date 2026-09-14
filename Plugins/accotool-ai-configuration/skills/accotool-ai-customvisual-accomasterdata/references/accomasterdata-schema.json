@@ -1,0 +1,409 @@
+{
+  "FormattingPaneSettings": {
+    "Connection": {
+      "Connection": {
+        "LicenseKey": "licenseKey",
+        "UseSelfHostedAPI": "useSelfhostedAPI",
+        "SelfHostedAPIURL": "SelfhostedAPIURL",
+        "AuthenticationMethod": "authenticationMethod",
+        "IsFabric": "isFabric",
+        "DatabasePassword": "databasePassword",
+        "TenantId": "tenantId",
+        "EncryptedUser": "encryptedUser",
+        "EncryptedPassword": "encryptedPassword",
+        "EncryptedTenantId": "encryptedTenantId",
+        "ServerName": "serverName",
+        "DatabaseName": "databaseName",
+        "SchemaName": "schemaName",
+        "TableName": "tableName",
+        "RequestTimeout": "requestTimeout",
+        "WritebackColumnName": "writebackColumnName",
+        "PerformMergeInsteadOfUpdate": "performMergeInsteadOfUpdate"
+      },
+      "AuditLog": {
+        "AuditLogEnabled": "auditLogEnabled",
+        "AuditLogCurrentUser": "auditLogCurrentUser",
+        "AuditLogSchema": "auditLogSchema",
+        "AuditLogTable": "auditLogTable",
+        "AuditLogUserDetails": "auditLogUserDetails",
+        "AuditLogTimestamp": "auditLogTimestamp",
+        "AuditLogRowKeyColumn": "auditLogRowKeyColumn",
+        "AuditLogSQLCommand": "auditLogSQLCommand",
+        "AuditLogType": "auditLogType"
+      }
+    },
+    "TransactionKeys": {
+      "TransactionKeys": {
+        "BooleanTransactionKeyOnRowCreation": "boolTransactionkeyOnRowCreation",
+        "TextTransactionKeyOnRowCreation": "textTransactionkeyOnRowCreation",
+        "NumericTransactionKeyOnRowCreation": "numbericTransactionkeyOnRowCreation"
+      }
+    },
+    "Datagrid": {
+      "Datagrid": {
+        "InitialState": "initialState",
+        "InfiniteScroll": "infiniteScroll",
+        "ScrollToCell": "scrollToCell",
+        "ThemeJSON": "themeJSON",
+        "ThemeJSONLastSave": "themeJSONLastSave",
+        "CellFontSize": "cellFontSize",
+        "HeaderFontSize": "headerFontSize",
+        "FontFamily": "fontFamily",
+        "HeaderHeight": "headerHeight",
+        "RowHeight": "rowHeight",
+        "ColumnHeaderAlignment": "columnHeaderAlignment",
+        "RowDataAlignment": "rowDataAlignment",
+        "ShowAggregationLabels": "showAggregationLabels",
+        "RowHeightIndividual": "rowHeightIndividual",
+        "EnableCreateRowModal": "enableCreateRowModal",
+        "LockedCellsBackgroundColor": "lockedCellsBackgroundColor",
+        "LockedCellsFontColor": "lockedCellsFontColor",
+        "HeaderFontColor": "headerFontColor",
+        "HeaderBackgroundColor": "headerBackgroundColor",
+        "CellFontColor": "cellFontColor",
+        "ApplyLightenTheme": "applyLightenTheme"
+      }
+    },
+    "Measures": {
+      "Measures": {
+        "UrlEnabled": "urlEnabled",
+        "TextAreaEnabled": "textAreaEnabled",
+        "BindingTextAreaMultilines": "bindingTextAreaMultilines",
+        "DisplayURLText": "displayURLText",
+        "UrlDisplayType": "urlDisplayType",
+        "Separators": "separators",
+        "DecimalPlaces": "decimalPlaces",
+        "Editable": "editable",
+        "Required": "required",
+        "BooleanFormatting": "booleanFormatting",
+        "SingleSelectOption": "singleSelectOption",
+        "DateEnableTimeEdit": "dateEnableTimeEdit",
+        "DateFormat": "dateFormat",
+        "TimeFormat": "timeFormat",
+        "AllowTime": "allowTime",
+        "LegacyDate": "legacyDate",
+        "DatetimeEnabled": "datetimeEnabled",
+        "ToggleTimeInDateFormat": "toggleTimeInDateFormat",
+        "DateTimeFlipped": "dateTimeFlipped",
+        "DropdownEnabled": "dropdownEnabled",
+        "DropdownFormula": "dropdownFormula",
+        "DropdownCascadingDependency": "dropdownCascadingDependency",
+        "DropdownKeyValueEnabled": "dropdownKeyValueEnabled",
+        "DropdownKeyValueDelimiter": "dropdownKeyValueDelimiter",
+        "DropdownItemDelimiter": "dropdownItemDelimiter",
+        "DropdownAllowFreeSolo": "dropdownAllowFreeSolo",
+        "TagsEnabled": "tagsEnabled",
+        "TagDelimiter": "tagDelimiter",
+        "TagFilled": "tagFilled",
+        "TagColor": "tagColor",
+        "TagHeight": "tagHeight",
+        "TagBorderRadius": "tagBorderRadius",
+        "RichTextEnabled": "richTextEnabled",
+        "AllowRichTextPlainCopy": "allowRichTextPlainCopy",
+        "PlainTextAsWriteback": "plainTextAsWriteback",
+        "GradientColors": "gradientColors",
+        "GraphMinValue": "graphMinValue",
+        "GraphMaxValue": "graphMaxValue",
+        "PercentagesEnabled": "percentagesEnabled",
+        "GraphAutoCalculateMinValue": "graphAutoCalculateMinValue",
+        "GraphAutoCalculateMaxValue": "graphAutoCalculateMaxValue",
+        "GraphAllowFreeSolo": "graphAllowFreeSolo",
+        "TogglePercentagesNumber": "togglePercentagesNumber",
+        "CustomFormat": "customFormat",
+        "RowGridAlignmentPerColumn": "rowGridAlignmentPerColumn",
+        "ColumnHeaderAlignmentPerColumn": "columnHeaderAlignmentPerColumn",
+        "HeaderBackgroundColor": "headerBackgroundColor",
+        "HeaderFontColor": "headerFontColor",
+        "HeaderFontStyle": "headerFontStyle",
+        "CellBackgroundColor": "cellBackgroundColor",
+        "CellFontColor": "cellFontColor",
+        "ShowCellLockInGrid": "showCellLockInGrid",
+        "ExcludeFromCreation": "excludeFromCreation",
+        "DefaultValueOnCreateEnabled": "defaultValueOnCreateEnabled",
+        "TextDefaultValueOnCreate": "textDefaultValueOnCreate",
+        "BooleanDefaultValueOnCreate": "booleanDefaultValueOnCreate",
+        "NumberDefaultValueOnCreate": "numberDefaultValueOnCreate"
+      }
+    },
+    "Validation": {
+      "Validation": {
+        "ConditionalFormatting": "conditionalFormatting",
+        "Min": "min",
+        "Max": "max",
+        "RegexString": "regexString",
+        "MinDateTime": "minDateTime",
+        "MaxDateTime": "maxDateTime",
+        "GroupingSettings": "groupingSettings",
+        "GroupingExpandAll": "groupingExpandAll",
+        "RowGroupingExpandAll": "rowGroupingExpandAll",
+        "CalculationSettings": "calculationSettings"
+      }
+    },
+    "Miscellaneous": {
+      "Miscellaneous": {
+        "CopyWithFormatting": "copyWithFormatting",
+        "AllowCreateRow": "allowCreateRow",
+        "IgnoreBlankRowsOnSave": "ignoreBlankRowsOnSave",
+        "AllowDeleteRow": "allowDeleteRow",
+        "ToolbarLabels": "toolbarLabels",
+        "SaveCount": "saveCount",
+        "CreateNewRowWithTab": "createNewRowWithTab",
+        "HighlightWholeRowOnFocusCell": "highlightWholeRowOnFocusCell",
+        "ResetApplication": "resetApplication",
+        "ToolbarBackgroundColor": "toolbarBackgroundColor",
+        "ToolbarFontColor": "toolbarFontColor",
+        "ToolbarFontSize": "toolbarFontSize",
+        "LocalStorageReportId": "localStoragageReportId"
+      }
+    },
+    "CustomColumns": {
+      "CustomColumns": {
+        "CustomColumnDefinitions": "customColumnDefinitions"
+      }
+    },
+    "LockCells": {
+      "LockCells": {
+        "AllowRowCreation": "allowRowCreation"
+      }
+    },
+    "DataReductionCustomization": {
+      "DataReductionCustomization": {
+        "RowCount": "rowCount"
+      }
+    },
+    "JsonSchemas": {
+      "datagrid.initialState": {
+        "Type": "string (JSON)",
+        "DefaultValue": "{}",
+        "Schema": {
+          "Type": "object",
+          "Description": "MUI DataGrid initial state (GridInitialStatePremium).",
+          "AdditionalProperties": true
+        }
+      },
+      "datagrid.themeJSON": {
+        "Type": "string (JSON)",
+        "DefaultValue": "{\n  \"palette\": {\n    \"primary\": { \"main\": \"#383838\" },\n    \"secondary\": { \"main\": \"#ececec\" }\n  },\n  \"shape\": { \"borderRadius\": \"0px\" }\n}",
+        "Schema": {
+          "Type": "object",
+          "Properties": {
+            "palette": {
+              "Type": "object",
+              "AdditionalProperties": true
+            },
+            "shape": {
+              "Type": "object",
+              "Properties": {
+                "borderRadius": {
+                  "Type": "string|number"
+                }
+              },
+              "AdditionalProperties": true
+            }
+          },
+          "AdditionalProperties": true
+        }
+      },
+      "datagrid.themeJSONLastSave": {
+        "Type": "string (JSON)",
+        "DefaultValue": null,
+        "Schema": {
+          "Type": "object",
+          "Description": "Last persisted theme snapshot.",
+          "AdditionalProperties": true
+        }
+      },
+      "datagrid.rowHeightIndividual": {
+        "Type": "string (JSON)",
+        "DefaultValue": "{}",
+        "Schema": {
+          "Type": "object",
+          "Properties": {
+            "<rowId>": {
+              "Type": "number"
+            }
+          },
+          "AdditionalProperties": {
+            "Type": "number"
+          }
+        }
+      },
+      "validation.conditionalFormatting": {
+        "Type": "string (JSON)",
+        "DefaultValue": "[]",
+        "Schema": {
+          "Type": "array",
+          "Items": {
+            "Type": "object",
+            "Properties": {
+              "ruleActive": { "Type": "boolean" },
+              "title": { "Type": "string" },
+              "columns": { "Type": "array", "Items": { "Type": "string" } },
+              "condition": { "Type": "string" },
+              "format": {
+                "Type": "object",
+                "Properties": {
+                  "reactCSS": {
+                    "Type": "object",
+                    "Properties": {
+                      "backgroundColor": { "Type": "string" },
+                      "fontColor": { "Type": "string" },
+                      "fontStyle": { "Type": "string" },
+                      "fontWeight": { "Type": "string" },
+                      "textDecoration": { "Type": "string" }
+                    },
+                    "AdditionalProperties": true
+                  },
+                  "adornments": {
+                    "Type": "object",
+                    "Properties": {
+                      "prepend": { "Type": "string" },
+                      "append": { "Type": "string" }
+                    },
+                    "AdditionalProperties": true
+                  },
+                  "lock": { "Type": "boolean" },
+                  "save": { "Type": "boolean" }
+                },
+                "AdditionalProperties": true
+              }
+            },
+            "AdditionalProperties": true
+          }
+        }
+      },
+      "validation.groupingSettings": {
+        "Type": "string (JSON)",
+        "DefaultValue": "[]",
+        "Schema": {
+          "Type": "array",
+          "Items": {
+            "Type": "object",
+            "Properties": {
+              "title": { "Type": "string" },
+              "columns": { "Type": "array", "Items": { "Type": "string" } },
+              "expanded": { "Type": "boolean" }
+            },
+            "AdditionalProperties": true
+          }
+        }
+      },
+      "validation.calculationSettings": {
+        "Type": "string (JSON)",
+        "DefaultValue": "[]",
+        "Schema": {
+          "Type": "array",
+          "Items": {
+            "Type": "object",
+            "Properties": {
+              "title": { "Type": "string" },
+              "column": { "Type": "string" },
+              "formula": { "Type": "string" }
+            },
+            "AdditionalProperties": true
+          }
+        }
+      },
+      "customColumns.customColumnDefinitions": {
+        "Type": "string (JSON)",
+        "DefaultValue": "[]",
+        "Schema": {
+          "Type": "array",
+          "Description": "Calculated/custom column definitions.",
+          "Items": {
+            "Type": "object",
+            "AdditionalProperties": true
+          }
+        }
+      },
+      "measures.gradientColors": {
+        "Type": "string (JSON)",
+        "DefaultValue": null,
+        "Schema": {
+          "Type": "object",
+          "Properties": {
+            "first": { "Type": "string", "Format": "color" },
+            "second": { "Type": "string", "Format": "color" },
+            "third": { "Type": "string", "Format": "color" }
+          },
+          "Required": ["first", "second", "third"],
+          "AdditionalProperties": false
+        }
+      }
+    }
+  },
+  "CustomVisualSettings": {
+    "ColumnGroupsState": {
+      "InternalPropertyName": "columnGroupsState:<reportId>",
+      "Schema": {
+        "Type": "object",
+        "Properties": {
+          "<groupId>": {
+            "Type": "boolean"
+          }
+        },
+        "AdditionalProperties": {
+          "Type": "boolean"
+        }
+      }
+    },
+    "ColumnWidths": {
+      "InternalPropertyName": "columnWidths:<reportId>",
+      "Schema": {
+        "Type": "object",
+        "Properties": {
+          "<columnField>": {
+            "Type": "number"
+          }
+        },
+        "AdditionalProperties": {
+          "Type": "number"
+        }
+      }
+    },
+    "RowHeightIndividualStorage": {
+      "InternalPropertyName": "rowHeightIndividual:<reportId>",
+      "Schema": {
+        "Type": "object",
+        "Properties": {
+          "<rowId>": {
+            "Type": "number"
+          }
+        },
+        "AdditionalProperties": {
+          "Type": "number"
+        }
+      }
+    },
+    "RecentColors": {
+      "InternalPropertyName": "recentColors:<reportId>",
+      "Schema": {
+        "Type": "array",
+        "Items": {
+          "Type": "string",
+          "Format": "color"
+        }
+      }
+    },
+    "ReadNotifications": {
+      "InternalPropertyName": "accoPLANNING_ReadNotifications",
+      "Schema": {
+        "Type": "array",
+        "Items": {
+          "Type": "object",
+          "Properties": {
+            "key": { "Type": "string" },
+            "title": { "Type": "string" },
+            "content": { "Type": "string" },
+            "severity": {
+              "Type": "string",
+              "Enum": ["blue", "green", "yellow", "red"]
+            }
+          },
+          "Required": ["key", "title", "content", "severity"],
+          "AdditionalProperties": false
+        }
+      }
+    }
+  }
+}
