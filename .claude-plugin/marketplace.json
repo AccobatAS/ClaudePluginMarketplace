@@ -1,13 +1,17 @@
 {
-  "name": "accobat-ai-plugins",
-  "owner": {
-    "name": "Accobat A/S",
-    "email": "support@accobat.com"
-  },
-  "plugins": [
-    {
-      "name": "accotool-ai-configuration",
-      "source": "./Plugins/accotool-ai-configuration"
-    }
-  ]
+    "name": "accobat-ai",
+    "owner": {
+        "name": "Accobat",
+        "email": "support@accobat.com"
+    },
+    "plugins": [
+        {
+            "name": "accotool-ai-configuration",
+            "source": "./Plugins/accotool-ai-configuration"
+        },
+        {
+            "name": "accobat-plugins",
+            "source": "./Plugins/accobat-plugins"
+        }
+    ]
 }
